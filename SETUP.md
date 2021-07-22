@@ -58,7 +58,51 @@ $ python -m http.server
 Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 ```
 
-You should see a basic 2-slide presentation. Now let's make sure this works with GitHub Pages
+You should see a basic 2-slide presentation - the default scaffolded deck. The distribution also comes with a `demo.html` file which is the source for the demo seen on the [reveal.js website](https://revealjs.com/) 
+
+Open `http://localhost:8000/demo.html` to view that presentation in your local server. This gives you a great sample to use as your starting point, or something to learn from in terms of configurations and features.
+
+
+Now let's make sure the default quickstart sldies work with GitHub Pages
+
+<br/>
 
 > 3. PUBLISH DEFAULT SLIDES
-Push repo changes up to GitHub.
+
+ * Push repo changes up to GitHub. 
+ * Visit the [Pages](https://github.com/SketchTheDocs/ig-fusion-dev/settings/pages) section of your repo settings.
+ * Select the `docs/` folder of main branch as source
+ * You'll see a notification like this:
+
+` Your site is ready to be published at https://sketchthedocs.github.io/ig-fusion-dev/`
+
+Visit that link - you should see the same site you saw in local testing. Your base workflow is validated!
+
+Now, making content changes and pushing them to your repo will automatically cause hosted slides to be updated.
+
+<br/>
+
+> 4. AUTOMATE WITH GITHUB ACTIONS
+
+**ToDo** I need to explore available GH actions for reveal.js. Some references of interest:
+ * [Automate PDF Generation](https://4comprehension.com/github-actions-reveal-js-and-automating-pdf-conversion/)
+
+<br/>
+
+> 5. CUSTOMIZE YOUR PRESENTATION
+
+Explore the [documentation](https://revealjs.com/installation/) for more. 
+
+ * Make changes to `index.html` file for your content
+ * Explore `demo.html` to get examples
+
+My initial goal is to make a "visuals" slide deck (with one image per slide) that has built-in speaker notes and can be made to run automatically (carousel mode). Features I plan to explore:
+ * [Slide Numbers](https://revealjs.com/slide-numbers/)
+ * [Touch Navigation](https://revealjs.com/touch-navigation/)
+ * [Speaker View](https://revealjs.com/speaker-view/)
+ * [Auto-Slide](https://revealjs.com/auto-slide/)
+ * [Media](https://revealjs.com/media/) - specifically with lazy-loading
+ * [Video Backgrounds](https://revealjs.com/backgrounds/)
+ * [Markdown](https://revealjs.com/markdown/)
+
+Happy Talk Trails!
